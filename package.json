@@ -1,9 +1,9 @@
 {
   "name": "htmlts-loader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "repository" : {
     "type": "git",
-    "url" : "git@github.com:tatjsn/htmlts-loader.git"
+    "url" : "https://github.com/tatjsn/htmlts-loader.git"
   },
   "description": "ES6 template strings HTML minifier for webpack",
   "main": "index.js",
