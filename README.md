@@ -4,7 +4,7 @@
 
 [version]: http://img.shields.io/npm/v/htmlts-loader.svg?style=flat-square
 
-htmlts-loader minify HTML string using [minimize][Swaagie], designed to preprocess ES6 template string wrapped with `` `html\n `` and `` \n` ``.
+htmlts-loader minify HTML string using [minimize](https://github.com/Swaagie/minimize), designed to preprocess ES6 template string wrapped with `` `html\n `` and `` \n` ``.
 
 This idea is inspired by github markdown syntax highlighting language identifier.
 
