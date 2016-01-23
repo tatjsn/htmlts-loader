@@ -23,7 +23,7 @@ module.exports = function(source) {
   var splits = source.split(/(`html\n[\s\S]*?\n)(?=`)/);
 
   Promise.all(splits.map(function(split) {
-    if (split.startsWith('`html\n')) {
+    if (split.indexOf('`html\n') === 0) {
       return parse('`' + split.substr(6));
     } else {
       return identity(split);
