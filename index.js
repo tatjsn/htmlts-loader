@@ -11,7 +11,7 @@ var parse = function(content) {
     });
   });
 };
-var passthru = function(content) {
+var identity = function(content) {
   return new Promise(function(resolve) {
     resolve(content);
   });
@@ -26,7 +26,7 @@ module.exports = function(source) {
     if (split.startsWith('`html\n')) {
       return parse('`' + split.substr(6));
     } else {
-      return passthru(split);
+      return identity(split);
     }
   })).then(function(results) {
     callback(null, results.join(''));
