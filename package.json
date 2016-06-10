@@ -1,19 +1,31 @@
 {
   "name": "htmlts-loader",
-  "version": "0.1.1",
-  "repository" : {
+  "version": "0.1.2",
+  "repository": {
     "type": "git",
-    "url" : "https://github.com/tatjsn/htmlts-loader.git"
+    "url": "https://github.com/tatjsn/htmlts-loader.git"
   },
   "description": "ES6 template strings HTML minifier for webpack",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel --out-dir lib --ignore __tests__ src",
+    "prepublish": "rm -rf lib && npm run build",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "minimize": "^1.7.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-jest": "^11.0.2",
+    "babel-polyfill": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0",
+    "jest-cli": "^12.1.1"
   }
 }
